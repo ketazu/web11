@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Ice Food</title>
+</head>
+<body>
+<body>
+<!-- Preloader -->
+<div class="preloader">
+    <div class="loader">
+        <span class="dot1"></span>
+        <span class="dot2"></span>
+        <span class="dot3"></span>
+    </div>
+</div>
+<div class="content">
+<header class="header">
+    <div class="header__side">
+        <div class="header__logo">
+            <img class="header__logo-img" src="images/icon/logo.png" alt="Ice Food Logo" width="200" height="177">
+        </div>
+        <section class="header__auth">
+            <button class="header__login">
+                <span class="header__login-text">Войти</span>
+                <img class="header__login-icon" src="images/icon/login.png" alt="авторизация" width="33" height="31">
+            </button>
+            <button class="header__sign-up">Зарегистрироваться</button>
+        </section>
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__list"></ul>
+    </nav>
+    <button class="header__button">
+        <span class="header__button-text">Добавить рецепт</span>
+        <img class="header__button-icon" src="images/icon/pancakes.png" alt="блины" width="105" height="60">
+    </button>
+</header>
+
+<main class="main">
+    <section class="categories">
+        <h2 class="categories__title">Рецепты по типам блюд</h2>
+        <ul class="categories__list">
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты первых блюд</a></li>
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты вторых блюд</a></li>
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты закусок</a></li>
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты заготовок</a></li>
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты соусов</a></li>
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты сладостей</a></li>
+            <li class="categories__item"><a class="categories__link" href="#">Рецепты напитков</a></li>
+        </ul>
+    </section>
+
+    <section class="news">
+        <h2 class="news__title">Последние новости</h2>
+
+        <div class="swiper dishes-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/icon/os_soup.jpg" alt="Салат">
+                    <div class="slide-content">
+                        <h3 class="news__item-title">Новый сезонный рецепт: Осенний суп</h3>
+                        <span class="news__date">15 октября 2023</span>
+                        <p class="news__text">Представляем вашему вниманию новый рецепт осеннего супа с сезонными овощами и ароматными травами.</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/icon/m_class.jpg" alt="Пюре">
+                    <div class="slide-content">
+                        <h3 class="news__item-title">Мастер-класс по выпечке</h3>
+                        <span class="news__date">10 октября 2023</span>
+                        <p class="news__text">Приглашаем всех желающих на мастер-класс по приготовлению традиционных русских пирогов.</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/icon/konk.jpg" alt="Рыбное блюдо">
+                    <div class="slide-content">
+                        <h3 class="news__item-title">Конкурс кулинарных фотографий</h3>
+                        <span class="news__date">5 октября 2023</span>
+                        <p class="news__text">Участвуйте в нашем новом конкурсе! Выиграйте набор профессиональной посуды.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="feedback">
+            <h3 class="feedback__title">Оставить отзыв</h3>
+            <form class="feedback__form" action="/" method="POST">
+                <textarea class="feedback__textarea" name="feedback" placeholder="Напишите ваш отзыв здесь..." required></textarea>
+                <button class="feedback__submit" type="submit">Отправить отзыв</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="recipes">
+        <input/>
+        <button type="submit">Search</button>
+        <h2 class="recipes__title">Лучшие рецепты</h2>
+        <ul class="recipes__grid">
+            <li class="recipes__item">
+                <a class="recipes__link" href="#">
+                    <div class="recipes__card">
+                        <img class="recipes__image" src="images/icon/salad.png" alt="Мимоза">
+                        <span class="recipes__name">Рецепт 1</span>
+                    </div>
+                </a>
+            </li>
+            <li class="recipes__item">
+                <a class="recipes__link" href="#">
+                    <div class="recipes__card">
+                        <img class="recipes__image" src="images/icon/puree.png" alt="Пюре">
+                        <span class="recipes__name">Рецепт 2</span>
+                    </div>
+                </a>
+            </li>
+            <li class="recipes__item">
+                <a class="recipes__link" href="#">
+                    <div class="recipes__card">
+                        <img class="recipes__image" src="images/icon/fish.png" alt="Сельдь под шубой">
+                        <span class="recipes__name">Рецепт 3</span>
+                    </div>
+                </a>
+            </li>
+            <li class="recipes__item">
+                <a class="recipes__link" href="#">
+                    <div class="recipes__card">
+                        <img class="recipes__image" src="images/icon/soup.png" alt="Суп">
+                        <span class="recipes__name">Рецепт 4</span>
+                    </div>
+                </a>
+            </li>
+            <li class="recipes__item">
+                <a class="recipes__link" href="#">
+                    <div class="recipes__card">
+                        <img class="recipes__image" src="images/icon/syrniki.png" alt="Сырники">
+                        <span class="recipes__name">Рецепт 5</span>
+                    </div>
+                </a>
+            </li>
+            <li class="recipes__item">
+                <a class="recipes__link" href="#">
+                    <div class="recipes__card">
+                        <img class="recipes__image" src="images/icon/vatrushka.png" alt="Ватрушка">
+                        <span class="recipes__name">Рецепт 6</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__container">
+        <a class="footer__logo">Ice food</a>
+        <p class="footer__copyright">&copy; Ice food 2025</p>
+    </div>
+</footer>
+    <div class="add-recipe-modal" hidden>
+        <section class="add-recipe-modal__content">
+            <button class="add-recipe-modal__close" type="button" aria-label="Закрыть">&times;</button>
+            <h3 class="add-recipe-modal__title">Добавить новый рецепт</h3>
+            <form id="recipeForm" class="add-recipe-modal__form" action="/" method="POST">
+                <input id="recipeName" class="add-recipe-modal__input" type="text" name="recipe-name" placeholder="Название рецепта" required>
+                <input id="recipeImage" class="add-recipe-modal__input" type="text" name="recipe-image" placeholder="URL изображения">
+                <textarea id="recipeDescription" class="add-recipe-modal__textarea" name="recipe-description" placeholder="Описание рецепта" required></textarea>
+                <div class="add-recipe-modal__ingredients">
+                    <h4>Ингредиенты:</h4>
+                    <div class="add-recipe-modal__ingredient-fields">
+                        <input class="add-recipe-modal__input" type="text" name="ingredient-1" placeholder="Ингредиент 1">
+                        <button type="button" class="add-recipe-modal__add-ingredient">+ Добавить еще</button>
+                    </div>
+                </div>
+                <div class="add-recipe-modal__steps">
+                    <h4>Шаги приготовления:</h4>
+                    <div class="add-recipe-modal__step-fields">
+                        <textarea class="add-recipe-modal__textarea" name="step-1" placeholder="Шаг 1"></textarea>
+                        <button type="button" class="add-recipe-modal__add-step">+ Добавить шаг</button>
+                    </div>
+                </div>
+                <p id="recipeMessage" class="add-recipe-modal__message"></p>
+                <button class="add-recipe-modal__submit" type="submit">Опубликовать рецепт</button>
+            </form>
+        </section>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>
