@@ -1,0 +1,547 @@
+/* Montserrat Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/MontserratRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Montserrat Medium */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/MontserratMedium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Montserrat SemiBold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/MontserratSemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Montserrat Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/MontserratBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Mulish Regular */
+@font-face {
+    font-family: 'Mulish';
+    src: url('../fonts/MulishRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Preloader styles */
+.content {
+    display: none;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fefefb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+.loader span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #00a2a2;
+    margin: 0 5px;
+}
+
+.dot1 {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.dot2 {
+    animation: bounce 1s ease-in-out 0.33s infinite;
+}
+
+.dot3 {
+    animation: bounce 1s ease-in-out 0.66s infinite;
+}
+
+@keyframes bounce {
+    0%, 75%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.header {
+    position: relative;
+}
+
+.header__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header__auth {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background: #b2e0e3;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #00a2a2;
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.header__login-icon {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.header__sign-up {
+    font-size: 14px;
+    padding: 3px 8px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.header__link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.header__button {
+    background-image: url("images/icon/bookmark.png");
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    left: 90%;
+}
+
+.header__button-text {
+    position: absolute;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.categories {
+    width: 20%;
+    height: 100%;
+    min-height: 400px;
+    background-color: #e1fcfd;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    top: 200px;
+    position: relative;
+}
+
+.categories__list {
+    padding: 0;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.categories__item {
+    margin-bottom: 10px;
+}
+
+.news {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.news__title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Swiper styles */
+.dishes-swiper {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fdf0db;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.swiper-slide img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid #00a2a2;
+}
+
+.slide-content {
+    max-width: 80%;
+}
+
+.swiper-slide h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.swiper-slide .news__date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.swiper-slide .news__text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #00a2a2;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00a2a2;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #fdf0db;
+    border-radius: 15px;
+}
+
+.feedback__title {
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+}
+
+.feedback__textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    min-height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.feedback__submit {
+    background-color: #00a2a2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.feedback__submit:hover {
+    background-color: #008b8b;
+}
+
+.recipes {
+    width: 20%;
+    height: 70%;
+    min-height: 400px;
+    position: relative;
+    top: 200px;
+    background-color: #e1fcfd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.recipes__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.recipes__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.recipes__description {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    padding: 10px;
+    background-color: #f79d9d;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    font-family: 'Mulish', sans-serif;
+}
+
+.recipes__item:hover .recipes__description {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.recipes__item:hover .recipes__card {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.recipes__image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+/* Стили для модального окна добавления рецепта */
+.add-recipe-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.add-recipe-modal__content {
+    position: relative;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.add-recipe-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.add-recipe-modal__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00a2a2;
+}
+
+.add-recipe-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-recipe-modal__input,
+.add-recipe-modal__textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-recipe-modal__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.add-recipe-modal__ingredients h4,
+.add-recipe-modal__steps h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.add-recipe-modal__add-ingredient,
+.add-recipe-modal__add-step {
+    background: none;
+    border: none;
+    color: #00a2a2;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.add-recipe-modal__submit {
+    background-color: #00a2a2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.add-recipe-modal__message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-recipe-modal__message.error {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.add-recipe-modal__message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.add-recipe-modal__submit:hover {
+    background-color: #008b8b;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.footer__logo {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+}
+
+.footer__copyright {
+    font-size: 14px;
+    color: #666;
+}
